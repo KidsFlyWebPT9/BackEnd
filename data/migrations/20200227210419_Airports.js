@@ -6,7 +6,7 @@ exports.up = function(knex) {
         Airport
           .string('name', 255)
           .notNullable()
-          .unique();
+          
         Airport.string('City', 255).notNullable();
         
     })
