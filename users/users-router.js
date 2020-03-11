@@ -33,10 +33,10 @@ router.get('/:id', restricted, async ( req,res ) => {
   
     try{
       const data = await 
-      users.findById;
+      Users.findById;
       
       if (data) {
-        users.update(body,id).then(updateUser =>{
+        Users.update(body,id).then(updateUser =>{
           res.status(200).json({message: "user updated", body});
         });
       } else{
@@ -45,7 +45,7 @@ router.get('/:id', restricted, async ( req,res ) => {
       }
     } catch (err) {
       res.status(500).json({message: 'Failed to update!', err});
-      console.log(error)
+      console.log(err);
     };
   });
 
